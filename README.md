@@ -20,6 +20,4 @@ It depends on [edn-java](http://github.com/bpsm/edn-java).
 
 ## Usage
 
-## Current Limitations
-
-Not yet implemented.
+See [RoundTripTest.java](https://github.com/bpsm/edn-java-joda/blob/master/src/test/java/us/bpsm/edn/joda/RoundTripTest.java)
