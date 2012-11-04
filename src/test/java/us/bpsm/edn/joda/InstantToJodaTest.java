@@ -1,16 +1,11 @@
 package us.bpsm.edn.joda;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static us.bpsm.edn.parser.Parser.Config.EDN_INSTANT;
-
-import java.text.DateFormat;
-
-import javax.swing.text.DateFormatter;
 
 import org.joda.time.DateTime;
 import org.joda.time.Instant;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 import org.junit.Test;
 
 import us.bpsm.edn.parser.Parseable;
