@@ -3,7 +3,6 @@ package us.bpsm.edn.joda;
 import static org.junit.Assert.assertEquals;
 import static us.bpsm.edn.parser.Parsers.newParser;
 import static us.bpsm.edn.parser.Parsers.newParserConfigBuilder;
-import static us.bpsm.edn.printer.Printers.newPrinterConfigBuilder;
 
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
@@ -14,8 +13,8 @@ import us.bpsm.edn.parser.Parseable;
 import us.bpsm.edn.parser.Parser;
 import us.bpsm.edn.parser.Parsers;
 import us.bpsm.edn.printer.Printer;
-import us.bpsm.edn.printer.Printer.Config;
 import us.bpsm.edn.printer.Printers;
+import us.bpsm.edn.protocols.Protocol;
 
 public class RoundTripTest {
 
@@ -49,10 +48,10 @@ public class RoundTripTest {
 
     private static int N_REPS = 1000;
 
-    private static final Config PRINT_CFG =
-            newPrinterConfigBuilder()
-            .bind(Instant.class, new PrintJodaInstantFn())
-            .bind(DateTime.class, new PrintJodaDateTimeFn())
+    private static final Protocol<Printer.Fn<?>> PRINT_CFG =
+            Printers.defaultProtocolBuilder()
+            .put(Instant.class, new PrintJodaInstantFn())
+            .put(DateTime.class, new PrintJodaDateTimeFn())
             .build();
 
     private static final Parser PARSE_INST_AS_DATE_TIME =
