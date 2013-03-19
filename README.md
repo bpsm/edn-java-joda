@@ -1,8 +1,11 @@
 # edn-java-guava
 
-*edn-java-joda* will provide an instant (`#inst`) parser that produces [Joda Time](http://joda-time.sourceforge.net/) [instants](http://joda-time.sourceforge.net/api-release/org/joda/time/Instant.html).
+*edn-java-joda* provides instant (`#inst`) parsers that produce
+[Joda Time][JT] [instants][JTi] and [DateTimes][JTdt].
 
-*edn-java-joda* is not yet implemented.
+[JT]: http://joda-time.sourceforge.net/
+[JTi]: http://joda-time.sourceforge.net/api-release/org/joda/time/Instant.html
+[JTdt]: http://joda-time.sourceforge.net/api-release/org/joda/time/DateTime.html
 
 ## Installation
 
@@ -16,8 +19,12 @@ This is a Maven project with the following coordinates:
 </dependency>
 ```
 
-It depends on [edn-java](http://github.com/bpsm/edn-java).
+It depends on [edn-java][EJ] and [joda-time][JT]
+
+[EJ]: http://github.com/bpsm/edn-java
 
 ## Usage
 
-See [RoundTripTest.java](https://github.com/bpsm/edn-java-joda/blob/master/src/test/java/us/bpsm/edn/joda/RoundTripTest.java)
+See [RoundTripTest.java][RTT].
+
+[RTT]: https://github.com/bpsm/edn-java-joda/blob/master/src/test/java/us/bpsm/edn/joda/RoundTripTest.java
